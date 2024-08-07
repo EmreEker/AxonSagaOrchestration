@@ -1,0 +1,21 @@
+  # Resmi OpenJDK Docker görüntüsünü kullan
+
+   FROM openjdk:14
+
+     
+
+     # Uygulamanın çalıştırılacağı dizini oluştur
+
+     WORKDIR /app
+
+     
+
+     # Uygulama JAR dosyasını kopyala
+
+     COPY target/Gateway-0.0.1-SNAPSHOT.jar .
+
+     
+
+     # Uygulamayı başlat
+
+     CMD ["java", "-jar", "Gateway-0.0.1-SNAPSHOT.jar"]
